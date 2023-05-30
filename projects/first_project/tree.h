@@ -12,10 +12,15 @@ private:
       @return the number of nodes in the subtree
    */
    int size() const;
-
+   
    std::string data;
    std::vector<Node*> children;
-friend class Tree;   
+
+friend class Tree;
+
+public:
+   void print();
+
 };
 
 /*
@@ -46,6 +51,7 @@ public:
    */
    int size() const;
 
+   void Tree::print();
   
    
 private:   
