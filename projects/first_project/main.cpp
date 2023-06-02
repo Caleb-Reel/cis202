@@ -17,7 +17,7 @@ int main()
    t2.add_subtree(t4);
    std::cout << "Size: " << t1.size() << std::endl;
 
-   // t1.print();   // this will recursively print the tree.
+   t1.print();   // this will recursively print the tree.
 
 
     return 0;
