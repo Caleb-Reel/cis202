@@ -11,16 +11,12 @@ private:
       Computes the size of the subtree whose root is this node.
       @return the number of nodes in the subtree
    */
-   int size() const;
-   
-   std::string data;
-   std::vector<Node*> children;
+    void print() const;
+    int size() const;
 
-friend class Tree;
-
-public:
-   void print();
-
+    std::string data;
+    std::vector<Node*> children;
+    friend class Tree;
 };
 
 /*
@@ -32,26 +28,26 @@ public:
    /**
       Constructs an empty tree.
    */
-   Tree();
+    void print() const;
+    Tree();
 
-   /**
-      Constructs a tree with one node and no children.
-      @param root_data the data for the root
-   */
-   Tree(std::string root_data);
+    /**
+       Constructs a tree with one node and no children.
+       @param root_data the data for the root
+    */
+    Tree(std::string root_data);
 
-   /**
-      Adds a subtree as the last child of the root.
-   */
-   void add_subtree(const Tree& subtree);
+    /**
+       Adds a subtree as the last child of the root.
+    */
+    void add_subtree(const Tree &subtree);
 
-   /**
-      Computes the size of this tree.
-      @return the number of nodes in the tree
-   */
-   int size() const;
+    /**
+       Computes the size of this tree.
+       @return the number of nodes in the tree
+    */
+    int size() const;
 
-   void Tree::print();
   
    
 private:   

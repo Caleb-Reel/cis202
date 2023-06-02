@@ -25,13 +25,15 @@ for(Node* np : children) {np->print();}
 
 void Node::print() const
 {
+   cout << data << endl;
     for(Node* np : children){np ->print();}
 }
 
 void Tree::print() const
 {
-    if(root != nullptr){root ->print();}
-    cout << data << endl;
+    if(root != nullptr)
+    {root ->print();}
+    
 }
 
 Tree::Tree()
