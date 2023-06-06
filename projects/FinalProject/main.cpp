@@ -64,7 +64,7 @@ public:
 
     double minElevation() const {
         if (mountains.empty()) {
-            return 0.0; // Or some other appropriate value indicating no minimum
+            return 0.0; 
         }
 
         double minElev = mountains[0].getElevation();
@@ -77,29 +77,6 @@ public:
         return minElev;
     }
 
-
-enum class cap { title, middle, end };
-void print(const char* text, double num, cap c)
-{
-    if (c == cap::title) std::cout <<
-    "┌──────────┬────────────┬──────────────────────────┐\n"
-    "│  number  │   iomanip  │      representation      │\n"
-    "├──────────┼────────────┼──────────────────────────┤\n"
-    ;
-    std::cout << std::left
-    << "│ " << std::setw(8) << text << " │ fixed      │ "
-    << std::setw(24) << std::fixed        << num << " │\n"
-    << "│ " << std::setw(8) << text << " │ scientific │ "
-    << std::setw(24) << std::scientific   << num << " │\n"
-    << "│ " << std::setw(8) << text << " │ hexfloat   │ "
-    << std::setw(24) << std::hexfloat     << num << " │\n"
-    << "│ " << std::setw(8) << text << " │ default    │ "
-    << std::setw(24) << std::defaultfloat << num << " │\n"
-    ;
-    std::cout << (c != cap::end ?
-    "├──────────┼────────────┼──────────────────────────┤\n" :
-    "└──────────┴────────────┴──────────────────────────┘\n" );
-}
 
 
     void printMountainDetails() const {
